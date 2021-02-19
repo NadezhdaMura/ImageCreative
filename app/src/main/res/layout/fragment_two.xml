@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/yellow">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:text="Интересное о кошках"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="24sp"
+        android:fontFamily="casual"
+        android:layout_gravity="center"
+        android:layout_marginBottom="285dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp" />
+    <ImageView
+        android:id="@+id/image9"
+        android:layout_width="34dp"
+        android:layout_height="40dp"
+        android:layout_gravity="left"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="18dp"
+        android:src="@drawable/image9"
+        />
+
+
+    <ImageView
+        android:id="@+id/image2"
+        android:layout_width="34dp"
+        android:layout_height="40dp"
+        android:layout_gravity="right"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="18dp"
+        android:src="@drawable/image2"/>
+
+    <ImageView
+        android:id="@+id/Cat"
+        android:layout_width="320dp"
+        android:layout_height="210dp"
+        android:layout_gravity="center|top"
+        android:layout_marginTop="80dp"
+        android:src="@drawable/imagecat"/>
+
+
+
+    <TextView
+        android:id="@+id/counter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Smt"
+        android:textColor="@color/black"
+        android:layout_marginTop="77dp"
+        android:textSize="16dp"/>
+
+</FrameLayout>
