@@ -37,7 +37,7 @@
         android:src="@drawable/image1"/>
 
     <ImageView
-        android:id="@+id/Fox"
+        android:id="@+id/imagefox"
         android:layout_width="300dp"
         android:layout_height="200dp"
         android:layout_gravity="center|top"

@@ -10,6 +10,7 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.core.os.postDelayed
 import androidx.fragment.app.Fragment
+import kotlinx.android.synthetic.main.fragment_one.*
 import kotlinx.android.synthetic.main.fragment_two.*
 
 class SecondFragment:Fragment() {
@@ -48,6 +49,19 @@ class SecondFragment:Fragment() {
                 ?.replace(R.id.fragmentContainer,fragmentOne)
                 ?.commit()
         }
+        var fragmentFive = FifthFragment()
+        requireActivity().findViewById<ImageView>(R.id.imagecat)
+        imagecat.setOnClickListener {
+            imagecat.visibility = View.VISIBLE
+            fragmentFive.arguments = Bundle().also {
+                it.putInt("key8", 0)
+            }
+            fragmentManager?.beginTransaction()
+                ?.replace(R.id.fragmentContainer, fragmentFive)
+                ?.commit()
+        }
+        var toast2 = arguments?.getInt("key9")
+        Toast.makeText(activity,"key9",Toast.LENGTH_LONG).show()
 
         val textCounter = requireActivity().findViewById<TextView>(R.id.counter)
         var counter = 18

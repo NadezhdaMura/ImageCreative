@@ -48,6 +48,19 @@ class ThirdFragment: Fragment(){
                 ?.replace(R.id.fragmentContainer,fragmentTwo)
                 ?.commit()
         }
+        var fragmentSix = SixthFragment()
+        requireActivity().findViewById<ImageView>(R.id.imagerabbit)
+        imagerabbit.setOnClickListener {
+            imagerabbit.visibility = View.VISIBLE
+            fragmentSix.arguments = Bundle().also {
+                it.putInt("key10", 0)
+            }
+            fragmentManager?.beginTransaction()
+                ?.replace(R.id.fragmentContainer, fragmentSix)
+                ?.commit()
+        }
+        var toast2 = arguments?.getInt("key11")
+        Toast.makeText(activity,"key11",Toast.LENGTH_LONG).show()
 
         val textCounter = requireActivity().findViewById<TextView>(R.id.counter)
         var counter = 18
@@ -61,7 +74,7 @@ class ThirdFragment: Fragment(){
         }, 0)
         Handler().postDelayed({
             textCounter.text =
-                "По данным за 2007 год, их насчитывалось около 300б а на сегодняшний день число" +
+                "По данным за 2007 год, их насчитывалось около 300, а на сегодняшний день число" +
                         " перевалило за 1000. При этом никто не знает, как кролики оказались на " +
                         "острове. Некоторые считают, что пару первых кроликов завезли туристы, либо" +
                         " же их выпустили школьники,оказавшиеся здесь с экскурсией."

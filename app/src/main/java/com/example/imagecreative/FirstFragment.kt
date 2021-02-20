@@ -46,6 +46,19 @@ class FirstFragment : Fragment() {
                 ?.replace(R.id.fragmentContainer,fragmentThree)
                 ?.commit()
         }
+        var fragmentFour = FourthFragment()
+        requireActivity().findViewById<ImageView>(R.id.imagefox)
+        imagefox.setOnClickListener {
+            imagefox.visibility = View.VISIBLE
+            fragmentTwo.arguments = Bundle().also {
+                it.putInt("key6", 0)
+            }
+            fragmentManager?.beginTransaction()
+                ?.replace(R.id.fragmentContainer, fragmentFour)
+                ?.commit()
+        }
+        var toast = arguments?.getInt("key7")
+        Toast.makeText(activity,"key7",Toast.LENGTH_LONG).show()
 
             val textCounter = requireActivity().findViewById<TextView>(R.id.counter)
             var counter = 18
